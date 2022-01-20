@@ -1,0 +1,106 @@
+@import "variables";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(./images/fondo8.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+/* nav */
+header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    background-color: pink !important;
+}
+.nav-link {
+    color: blueviolet !important;
+}
+
+/* carousel */
+
+
+
+/*Fondos servicios*/
+
+.servicio1, .servicio2 {
+    margin-top: 30px;
+    background-image: url(./images/fondo8.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/*imagen clientes*/
+
+.cliente {
+    margin-top: 10px;
+}
+
+.cfoto {
+    align-content: center;
+    justify-content: center;
+    text-justify: newspaper;
+}
+
+.foto {
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: solid pink 2px;
+}
+
+.foto1 {
+    background-image: url(./images/parra.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.foto2 {
+    background-image: url(./images/bodega.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.foto3 {
+    background-image: url(./images/Mendoza.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*footer*/
+
+footer {
+    margin-top: 10px;
+    background-image: url(./images/fondo7.svg);
+    background-size: cover;
+    background-position: center;
+    text-align: right;
+}
+
+footer .redes {
+    text-align: center;
+    font-size: 30px;
+}
+
+.contacto ul li {
+    list-style: none;
+}
+
+.card {
+    border: solid 2px pink;
+    margin: 10px;
+    color: blueviolet;
+}
