@@ -7,11 +7,14 @@ $color2: blueviolet;
 $color3: #dc3545;
 $color4: red;
 
-/* fuentes */
+/* tamaño del carousel*/
+
+$alturaCarrusel: 300px;
 
 
 /* tamaño fuentes */
 $fsize1: 10px;
+$fsize1-5:$fsize1*1.5;
 $fsize2: $fsize1*2;
 $fsize3: $fsize1*3;
 $fsize4: $fsize1*4;
@@ -35,3 +38,34 @@ $fuente5: 'Bubblegum Sans', cursive; //titulo
 $fuente6: 'Niconne', cursive; /* nombre de los profesionales*/
 $fuente7: 'Merienda', cursive; /* nombre de los profesionales*/
 $fuente8: 'Kaushan Script', cursive; // nombres
+
+/*estilos de texto */
+
+@mixin titulo1 ($font-family, $font-size ) {
+    font-family: $fuente5;
+    font-size: $fsize4;
+    text-align: center;
+}
+
+@mixin titulo2 ($font-family, $font-size ) {
+    font-family: $fuente5;
+    font-size: $fsize3;
+    text-align: center;   
+}
+
+@mixin titulo3 ($font-family, $font-size ) {
+    font-family: $fuente5;
+    font-size: $fsize4;
+    text-decoration: underline 1px;
+}
+
+@mixin paragrph($font-family, $font-size ) {
+    font-family: $fuente4;
+    font-size: $fsize2;
+}
+
+@mixin cardtitle ($font-family, $font-size ) {
+    font-family: $fuente8;
+    font-size: $fsize3;
+    color: $color2;
+}

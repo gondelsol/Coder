@@ -1,0 +1,31 @@
+@import "variables";
+
+.mainvalue {
+    margin: $dis3;
+    & h1 {
+        @include titulo1(-family, -size);
+        color: $color2; 
+    }
+    & p {
+        @include paragrph(-family, -size);
+    }   
+}
+
+
+
+.list-group {
+    font-family: $fuente5;
+    font-size: $fsize2;
+    & a:active {
+        background-color: $color1;
+        color: $color2;
+    }
+}
+
+
+.tab-content {
+    & .tab-pane {
+        @include paragrph(-family, -size);
+        padding: $dis2;
+    }
+}

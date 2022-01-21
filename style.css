@@ -1,21 +1,26 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
 /* paleta de colores */
-/* fuentes */
+/* tamaño del carousel*/
 /* tamaño fuentes */
 /*margins - paddings*/
 /* fuentes */
 /* nombre de los profesionales*/
 /* nombre de los profesionales*/
+/*estilos de texto */
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
 /* paleta de colores */
-/* fuentes */
+/* tamaño del carousel*/
 /* tamaño fuentes */
 /*margins - paddings*/
 /* fuentes */
 /* nombre de los profesionales*/
 /* nombre de los profesionales*/
+/*estilos de texto */
 /* nav */
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
 .navbar {
   background-color: pink !important;
   font-family: "Ubuntu", sans-serif !important;
@@ -31,11 +36,111 @@
   font-size: 30px;
 }
 
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+.mainvalue {
+  margin: 30px;
+}
+.mainvalue h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+  color: blueviolet;
+}
+.mainvalue p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+.list-group {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 20px;
+}
+.list-group a:active {
+  background-color: pink;
+  color: blueviolet;
+}
+
+.tab-content .tab-pane {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+/* home Page */
+/* carousel */
+.carousel-item {
+  height: 300px !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.principal {
+  padding: 30px 0px 0px 0px;
+}
+.principal h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+.principal p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+.maincontact {
+  margin: 10px;
+}
+
+.form-group {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 30px;
+}
+
+.btn {
+  background-color: pink;
+}
+
+.mapa {
+  border: solid 4px pink;
+  border-radius: 16px;
+  margin-top: 30px;
+  height: 500px;
+}
+.mapa .gmap {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
 * {
   margin: 0px;
   padding: 0px;
 }
 
+/* cuerpo */
 body {
   background-image: url(./images/fondo8.svg);
   background-size: cover;
@@ -48,7 +153,6 @@ header {
   margin-bottom: 30px;
 }
 
-/* carousel */
 /*Fondos servicios*/
 .servicio1, .servicio2 {
   margin-top: 30px;
@@ -58,7 +162,7 @@ header {
   background-position: top;
 }
 
-/*imagen clientes*/
+/*imagenes clientes*/
 .cliente {
   margin-top: 10px;
 }
@@ -121,7 +225,7 @@ footer .contacto h3 {
 footer .contacto ul li {
   list-style: none;
   font-family: "Bubblegum Sans", cursive;
-  font-size: 10px;
+  font-size: 15px;
 }
 footer .contacto p {
   font-family: "Merienda", cursive;
@@ -134,10 +238,19 @@ footer .contacto p {
 }
 
 /* fin footer */
+/* tarjetas del sitio */
 .card {
   border: solid 2px pink;
   margin: 10px;
+}
+.card .card-body .card-title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 30px;
   color: blueviolet;
+}
+.card .card-body .card-text {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

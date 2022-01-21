@@ -1,10 +1,15 @@
 @import "variables";
 @import "nav";
+@import "values";
+@import "index";
+@import "contact";
 
 * {
     margin: 0px;
     padding: 0px;
 }
+
+/* cuerpo */ 
 
 body {
     background-image: url(./images/fondo8.svg);
@@ -18,7 +23,9 @@ header {
     margin-bottom: 30px;
 }
 
-/* carousel */
+
+
+
 
 
 
@@ -32,7 +39,7 @@ header {
     background-position: top;
 }
 
-/*imagen clientes*/
+/*imagenes clientes*/
 
 .cliente {
     margin-top: 10px;
@@ -99,7 +106,7 @@ footer {
                     li {
                         list-style: none;
                         font-family: $fuente5;
-                        font-size: $fsize1;
+                        font-size: $fsize1-5;
                     }
                 }
                 p {
@@ -117,8 +124,24 @@ footer {
 
 /* fin footer */
 
+
+/* tarjetas del sitio */
+
+
 .card {
     border: solid 2px pink;
     margin: 10px;
-    color: blueviolet;
+
+    & .card-body {
+        & .card-title {
+            @include cardtitle (-family, -size);
+        }
+        & .card-text {
+            @include paragrph(-family, -size);
+        }
+    }
+
 }
+
+
+
