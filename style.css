@@ -7,6 +7,30 @@
 /* fuentes */
 /* nombre de los profesionales*/
 /* nombre de los profesionales*/
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+/* paleta de colores */
+/* fuentes */
+/* tamaño fuentes */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/* nav */
+.navbar {
+  background-color: pink !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: 20px;
+}
+.navbar a::first-letter {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.nav-link:hover {
+  color: blueviolet !important;
+  font-size: 30px;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -18,18 +42,10 @@ body {
   background-position: top;
 }
 
-/* nav */
+/* Encabezado */
 header {
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.navbar {
-  background-color: pink !important;
-}
-
-.nav-link {
-  color: blueviolet !important;
 }
 
 /* carousel */
@@ -85,21 +101,39 @@ header {
 /*footer*/
 footer {
   margin-top: 10px;
+  padding: 10px 0px 0px 0px;
   background-image: url(./images/fondo7.svg);
   background-size: cover;
   background-position: center;
   text-align: right;
 }
-
 footer .redes {
   text-align: center;
   font-size: 30px;
 }
-
-.contacto ul li {
+footer .redes .fab {
+  padding: 0px 30px 0px 0px;
+}
+footer .contacto h3 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+}
+footer .contacto ul li {
   list-style: none;
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 10px;
+}
+footer .contacto p {
+  font-family: "Merienda", cursive;
+  font-size: 10px;
 }
 
+.fab:hover {
+  color: blueviolet;
+  font-size: 40px;
+}
+
+/* fin footer */
 .card {
   border: solid 2px pink;
   margin: 10px;

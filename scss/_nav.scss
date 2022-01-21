@@ -1,0 +1,21 @@
+@import "variables";
+
+/* nav */
+
+
+
+.navbar {
+    background-color: $color1 !important;
+    font-family: $fuente1 !important;
+    font-size: $fsize2;
+    a::first-letter{
+        color: $color2;
+        font-size: $fsize3;
+    }
+}
+
+
+.nav-link:hover {
+    color: $color2 !important ;
+    font-size: $fsize3 ;
+}

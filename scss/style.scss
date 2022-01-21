@@ -1,4 +1,5 @@
 @import "variables";
+@import "nav";
 
 * {
     margin: 0px;
@@ -11,17 +12,10 @@ body {
     background-position: top;
 }
 
-/* nav */
+/* Encabezado */
 header {
     margin-top: 30px;
     margin-bottom: 30px;
-}
-
-.navbar {
-    background-color: pink !important;
-}
-.nav-link {
-    color: blueviolet !important;
 }
 
 /* carousel */
@@ -83,21 +77,45 @@ header {
 /*footer*/
 
 footer {
-    margin-top: 10px;
+    margin-top: $dis1;
+    padding: $dis1 0px 0px 0px;
     background-image: url(./images/fondo7.svg);
     background-size: cover;
     background-position: center;
     text-align: right;
+    &  .redes {
+        text-align: center;
+        font-size: $fsize3;
+        & .fab {
+            padding: 0px 30px 0px 0px;
+        }
+    }
+    & .contacto {
+                h3 {
+                    font-family: $fuente8;
+                    font-size: $fsize2;
+                }
+                ul {
+                    li {
+                        list-style: none;
+                        font-family: $fuente5;
+                        font-size: $fsize1;
+                    }
+                }
+                p {
+                    font-family: $fuente7;
+                    font-size: $fsize1;
+                }
+    }
 }
 
-footer .redes {
-    text-align: center;
-    font-size: 30px;
+
+.fab:hover {
+    color: $color2 ;
+    font-size: $fsize4 ;
 }
 
-.contacto ul li {
-    list-style: none;
-}
+/* fin footer */
 
 .card {
     border: solid 2px pink;
