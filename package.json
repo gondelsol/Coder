@@ -8,7 +8,7 @@
     "build-css":"node-sass --include-path scss scss/style.scss style.css",
 "watch-css":"nodemon -e scss -x\"npm run build-css\""
   },
-  "author": "",
+  "author": "Joaquin Gonzalez del Solar",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1",
