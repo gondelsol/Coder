@@ -54,9 +54,10 @@ $fuente8: 'Kaushan Script', cursive; // nombres
 }
 
 @mixin titulo3 ($font-family, $font-size ) {
-    font-family: $fuente5;
-    font-size: $fsize4;
+    font-family: $fuente4;
+    font-size: $fsize2;
     text-decoration: underline 1px;
+    text-align: center;  
 }
 
 @mixin paragrph($font-family, $font-size ) {

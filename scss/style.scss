@@ -3,6 +3,8 @@
 @import "values";
 @import "index";
 @import "contact";
+@import "services";
+
 
 * {
     margin: 0px;
@@ -39,10 +41,16 @@ header {
     background-position: top;
 }
 
-/*imagenes clientes*/
+/* clientes*/
 
 .cliente {
     margin-top: 10px;
+    h1 {
+        @include titulo1 (-family, -size);
+    }
+    p {
+        @include paragrph(-family, -size);
+    }
 }
 
 .cfoto {
@@ -80,6 +88,7 @@ header {
     background-repeat: no-repeat;
 }
 
+/* Clientes */
 
 /*footer*/
 
