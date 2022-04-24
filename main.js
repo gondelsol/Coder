@@ -14,38 +14,39 @@ let precioFinal;
 let datos;
 let empresa;
 const nuevoArray = [];
-
+const empresasAmigas = ["coviar", "fecovita", "Bodegas Argentinas"]; //defino las asociaciones claves de mi empresa
+let calculadora;
 
 const arrayPrecio = [{
-        nombre: 'Basic 1',
+        nombre_analisis: 'Basic 1',
         precio: 100
     },
     {
-        nombre: 'Basic 2',
+        nombre_analisis: 'Basic 2',
         precio: 200
     },
     {
-        nombre: 'Basic 3',
+        nombre_analisis: 'Basic 3',
         precio: 300
     },
     {
-        nombre: 'Basic 4',
+        nombre_analisis: 'Basic 4',
         precio: 400
     },
     {
-        nombre: 'Phenolic 1',
+        nombre_analisis: 'Phenolic 1',
         precio: 100
     },
     {
-        nombre: 'Phenolic 2',
+        nombre_analisis: 'Phenolic 2',
         precio: 200
     },
     {
-        nombre: 'Phenolic 3',
+        nombre_analisis: 'Phenolic 3',
         precio: 300
     },
     {
-        nombre: 'Phenolic 4',
+        nombre_analisis: 'Phenolic 4',
         precio: 400
     },
 ];
@@ -67,7 +68,7 @@ class Analisis {
         } while (this.cantidad < 0);
 
         this.codigo = parseInt(prompt("Ingrese codigo promocional. Valores válidos para descuentos:\n1 - 14410 para el 10%.\n2 - 24420 para el 20%.\n3 - 34430 para el 30%."));
-       
+
     }
     ingresarNombre() {
         let confirm;
@@ -183,7 +184,7 @@ function ingresarAnalisis() {
         arrayPedido[k].ingresarNombre();
         arrayPedido[k].ingresarDatos();
         arrayPedido[k].evaluarCodigoPromocional();
-        k++ ;
+        k++;
         control = confirm("¿Ingresará otro analisis mas?");
 
     } while (control);
@@ -197,14 +198,13 @@ function ingresarAnalisis() {
 
 
 function presentacion() {
-    presentacionProductos = document.createElement("div");
-    presentacionProductos.innerHTML = "<p>Los productos que seleccionó son: </h2>";
-    document.body.append(presentacionProductos);
+    presentacionProductos = document.getElementById("analisys");
+    presentacionProductos.innerHTML = "<h3>Los productos que seleccionó son: <h3>";
     for (const pedido of arrayPedido) {
         contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3> Análisis: ${pedido.nombre}</h3>
+        contenedor.innerHTML = `<h2> Análisis: ${pedido.nombre}</h2>
             <p>Cantidad: ${pedido.cantidad}</p>`;
-        document.body.appendChild(contenedor);
+   document.getElementById("analisys").appendChild(contenedor);
     }
 
 }
@@ -230,9 +230,10 @@ function ingresarContacto() {
 }
 
 
-function validarEmpresa () {
-    e.preventDefault ();
+function validarEmpresa() {
+    e.preventDefault();
     forma2 = e.target;
+
     console.log(Joaquin || "la empresa no está registrada");
 }
 
@@ -244,11 +245,17 @@ function validarFormulario(e) {
     console.log("nombre: " + forma.children[0].value);
     console.log("Apellido: " + forma.children[1].value);
 
+    // empleo de operadores avanzados para identificar empresas amigas
+
+    const [a, b, c] = empresasAmigas;
+    forma.children[0].value == (a || b || c) && alert("La empresa es amiga. Aplique su código de descuento 34430");
+
 }
 
 
 
 function calcular() {
+
     for (i = 0; i < arrayPedido.length; i++) {
         for (j = 0; j < arrayPrecio.length; j++) {
             if (arrayPedido[i].nombre == arrayPrecio[j].nombre) {
@@ -256,16 +263,21 @@ function calcular() {
             }
         }
     }
-    document.body.append("\nEl precio total es: " + precioTotal);
+    console.log(precioTotal);
+    calculadora = document.getElementById("precio");
+    calculadora.innerHTML = ` <div class="container">
+<p>El precio total es ${precioTotal}</p>
+</div> `;
     localStorage.setItem('valor', JSON.stringify(precioTotal));
     precioFinal = localStorage.getItem('valor');
+
 }
 
 
 function mostrar() {
     console.log("el array tiene objetos:  " + arrayPedido.length);
     const cantidadAnalisis = arrayPedido.reduce((acc, el) => acc + el.cantidad, 0);
-   console.log("cantidad de analisis a realizar: " + cantidadAnalisis);
+    console.log("cantidad de analisis a realizar: " + cantidadAnalisis);
 
     const arrayBasic = arrayPedido.filter((el) => el.nombre.includes('Basic'));
     console.log(...arrayBasic); //separo los objetos del array para mostrarlos por consola, envío los parámetros por separado
@@ -273,7 +285,7 @@ function mostrar() {
 
     const arrayPhenolic = arrayPedido.filter((el) => el.nombre.includes('Phenolic'));
     console.log(...arrayPhenolic); //separo los objetos del array para mostrarlos por consola, envío los parámetros por separado
- 
+
     console.log(precioFinal);
     console.log(unUsuario);
     datos = {
