@@ -18,35 +18,35 @@ const empresasAmigas = ["coviar", "fecovita", "Bodegas Argentinas"]; //defino la
 let calculadora;
 
 const arrayPrecio = [{
-        nombre_analisis: 'Basic 1',
+        nombre: 'Basic 1',
         precio: 100
     },
     {
-        nombre_analisis: 'Basic 2',
+        nombre: 'Basic 2',
         precio: 200
     },
     {
-        nombre_analisis: 'Basic 3',
+        nombre: 'Basic 3',
         precio: 300
     },
     {
-        nombre_analisis: 'Basic 4',
+        nombre: 'Basic 4',
         precio: 400
     },
     {
-        nombre_analisis: 'Phenolic 1',
+        nombre: 'Phenolic 1',
         precio: 100
     },
     {
-        nombre_analisis: 'Phenolic 2',
+        nombre: 'Phenolic 2',
         precio: 200
     },
     {
-        nombre_analisis: 'Phenolic 3',
+        nombre: 'Phenolic 3',
         precio: 300
     },
     {
-        nombre_analisis: 'Phenolic 4',
+        nombre: 'Phenolic 4',
         precio: 400
     },
 ];
@@ -202,9 +202,9 @@ function presentacion() {
     presentacionProductos.innerHTML = "<h3>Los productos que seleccionó son: <h3>";
     for (const pedido of arrayPedido) {
         contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h2> Análisis: ${pedido.nombre}</h2>
+        contenedor.innerHTML = `<p> Análisis: ${pedido.nombre}</p>
             <p>Cantidad: ${pedido.cantidad}</p>`;
-   document.getElementById("analisys").appendChild(contenedor);
+        document.getElementById("analisys").appendChild(contenedor);
     }
 
 }
@@ -266,7 +266,7 @@ function calcular() {
     console.log(precioTotal);
     calculadora = document.getElementById("precio");
     calculadora.innerHTML = ` <div class="container">
-<p>El precio total es ${precioTotal}</p>
+<p>El precio total es $ ${precioTotal}</p>
 </div> `;
     localStorage.setItem('valor', JSON.stringify(precioTotal));
     precioFinal = localStorage.getItem('valor');
