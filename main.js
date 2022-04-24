@@ -5,12 +5,14 @@ let contacto;
 let miFormulario;
 let input1;
 let forma;
+let forma2;
 var i;
 var precioTotal = 0;
 var k = 0;
 let unUsuario;
 let precioFinal;
 let datos;
+let empresa;
 const nuevoArray = [];
 
 
@@ -161,10 +163,12 @@ boton6.addEventListener("click", mostrar);
 function presentacionCliente() {
     cliente = document.getElementById("usuario");
     cliente.innerHTML = `
-    <div class="container">
+    <form id="formEmpresa" class="container">
     <input type="text" class="form-control" id="miUsuario" placeholder="U & V Análisis">
-    </div>`;
-    localStorage.setItem('miUsuario', cliente);
+    </form>`;
+    empresa = document.getElementById("miUsuario");
+    empresa.addEventListener("submit", validarEmpresa);
+    localStorage.setItem('miUsuario', empresa);
     unUsuario = localStorage.getItem('miUsuario');
 }
 
@@ -223,6 +227,13 @@ function ingresarContacto() {
     input1.onchange = () => {
         console.log(" Ingresaste el nombre de pila")
     }
+}
+
+
+function validarEmpresa () {
+    e.preventDefault ();
+    forma2 = e.target;
+    console.log(Joaquin || "la empresa no está registrada");
 }
 
 function validarFormulario(e) {
