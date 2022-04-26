@@ -17,7 +17,7 @@ var descuento;
 const nuevoArray = [];
 const empresasRecomendadas = ["renacer", "norton", "crotta"]; // cuando la web reconozca estas empresas, la misma les aplicará un 10% de descuento
 const empresasAmigas = ["aroldos", "trivento", "gasconi", "chandon"]; // cuando la web reconozca estas empresas, la misma les aplicará un 20% de descuento
-const empresasSocias=["coviar", "fecovita", "Bodegas Argentinas"]; //cuando la web reconozca estas empresas, la misma les aplicará un 30% de descuento
+const empresasSocias=["coviar", "fecovita", "mastroeni"]; //cuando la web reconozca estas empresas, la misma les aplicará un 30% de descuento
 
 
 let calculadora;
@@ -119,11 +119,9 @@ class Analisis {
 
 }
 
-
-let boton1 = document.getElementById("btnNombre");
-boton1.addEventListener("click", presentacionCliente);
-//boton1.onclick = () => (console.log("boton pinchado"));
-//boton1.onmousemove = () => (console.log("pasaste con el raton arriba del botón rojo"));
+let boton1 = document.getElementById("btnContacto");
+boton1.addEventListener("click", ingresarContacto);
+//boton4.onclick = () => (console.log("pinchaste el formulario de contacto"));
 
 let boton2 = document.getElementById("btnProductos");
 boton2.addEventListener("click", presentacion);
@@ -133,9 +131,7 @@ let boton3 = document.getElementById("btnAnalisis");
 boton3.addEventListener("click", ingresarAnalisis);
 //boton3.onclick = () => (console.log("pinchaste la selección de análisis"));
 
-let boton4 = document.getElementById("btnContacto");
-boton4.addEventListener("click", ingresarContacto);
-//boton4.onclick = () => (console.log("pinchaste el formulario de contacto"));
+
 
 let boton5 = document.getElementById("btnCalculadora");
 boton5.addEventListener("click", calcular);
@@ -145,7 +141,7 @@ let boton6 = document.getElementById("btnMostrar");
 boton6.addEventListener("click", mostrar);
 //boton6.onclick = () => (console.log("pinchaste el boton mostrar"));
 
-
+/*
 function presentacionCliente() {
     cliente = document.getElementById("usuario");
     cliente.innerHTML = `
@@ -157,8 +153,28 @@ function presentacionCliente() {
     localStorage.setItem('miUsuario', empresa);
     unUsuario = localStorage.getItem('miUsuario');
 }
+*/
 
+function ingresarContacto() {
+    contacto = document.getElementById("form");
+    contacto.innerHTML = `
+    <form id="formulario" class= "container">
+    <input type="text" class="form-control" id="nombreEmpresa" placeholder="Gondelsol Inc">
+    <input type="text" class="form-control" id="nombreUsuario" placeholder="Joaquin">
+    <input type="text" class="form-control" id="apellidoUsuario" placeholder="Gonzalez del Solar">
+    <input type="number" class="form-control" id="numeroDNI" placeholder="31000111">
+    <input type="tel" class="form-control" id="numeroTelefono" placeholder="Ex. +54261666666">
+    <input type="email" class="form-control" id="ecorreo" placeholder="example@email.com.ar">
+    <input type="submit" value="Enviar">
+</form> `;
+    miFormulario = document.getElementById("formulario");
+    miFormulario.addEventListener("submit", validarFormulario);
 
+    input1 = document.getElementById("nombreUsuario");
+    input1.onchange = () => {
+        console.log(" Ingresaste el nombre de pila")
+    }
+}
 
 
 
@@ -193,26 +209,6 @@ function presentacion() {
 
 }
 
-function ingresarContacto() {
-    contacto = document.getElementById("form");
-    contacto.innerHTML = `
-    <form id="formulario" class= "container">
-    <input type="text" class="form-control" id="nombreEmpresa" placeholder="Gondelsol Inc">
-    <input type="text" class="form-control" id="nombreUsuario" placeholder="Joaquin">
-    <input type="text" class="form-control" id="apellidoUsuario" placeholder="Gonzalez del Solar">
-    <input type="number" class="form-control" id="numeroDNI" placeholder="31000111">
-    <input type="tel" class="form-control" id="numeroTelefono" placeholder="Ex. +54261666666">
-    <input type="email" class="form-control" id="ecorreo" placeholder="example@email.com.ar">
-    <input type="submit" value="Enviar">
-</form> `;
-    miFormulario = document.getElementById("formulario");
-    miFormulario.addEventListener("submit", validarFormulario);
-
-    input1 = document.getElementById("nombreUsuario");
-    input1.onchange = () => {
-        console.log(" Ingresaste el nombre de pila")
-    }
-}
 
 
 function validarEmpresa() {
@@ -241,6 +237,9 @@ function validarFormulario(e) {
 
     const [i, j, k] = empresasSocias;
     forma.children[0].value == (i || j || k) && alert("La empresa es socia. Obtendrá un 30 % de descuento sobre su compra"); descuento = 0.3  ;
+
+    localStorage.setItem('empresa', JSON.stringify(forma.children[0].value));
+    unUsuario = localStorage.getItem('empresa');
 
 }
 
