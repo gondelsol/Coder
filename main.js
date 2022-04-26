@@ -13,9 +13,15 @@ let unUsuario;
 let precioFinal;
 let datos;
 let empresa;
+var descuento;
 const nuevoArray = [];
-const empresasAmigas = ["coviar", "fecovita", "Bodegas Argentinas"]; //defino las asociaciones claves de mi empresa
+const empresasRecomendadas = ["renacer", "norton", "crotta"]; // cuando la web reconozca estas empresas, la misma les aplicará un 10% de descuento
+const empresasAmigas = ["aroldos", "trivento", "gasconi", "chandon"]; // cuando la web reconozca estas empresas, la misma les aplicará un 20% de descuento
+const empresasSocias=["coviar", "fecovita", "Bodegas Argentinas"]; //cuando la web reconozca estas empresas, la misma les aplicará un 30% de descuento
+
+
 let calculadora;
+
 
 const arrayPrecio = [{
         nombre: 'Basic 1',
@@ -114,7 +120,7 @@ class Analisis {
         } while (confirm);
 
     }
-
+/*
     evaluarCodigoPromocional() {
         switch (this.codigo) {
             case 14410:
@@ -131,7 +137,7 @@ class Analisis {
                 break;
         }
     }
-
+*/
 }
 
 
@@ -213,6 +219,7 @@ function ingresarContacto() {
     contacto = document.getElementById("form");
     contacto.innerHTML = `
     <form id="formulario" class= "container">
+    <input type="text" class="form-control" id="nombreEmpresa" placeholder="Gondelsol Inc">
     <input type="text" class="form-control" id="nombreUsuario" placeholder="Joaquin">
     <input type="text" class="form-control" id="apellidoUsuario" placeholder="Gonzalez del Solar">
     <input type="number" class="form-control" id="numeroDNI" placeholder="31000111">
@@ -242,13 +249,20 @@ function validarFormulario(e) {
 
     forma = e.target;
     console.log("Formulario enviado con los siguientes datos: ");
-    console.log("nombre: " + forma.children[0].value);
-    console.log("Apellido: " + forma.children[1].value);
+    console.log("Empresa: " + forma.children[0].value);
+    console.log("Nombre: " + forma.children[1].value);
+    console.log("Apellido: " + forma.children[2].value);
 
-    // empleo de operadores avanzados para identificar empresas amigas
+    // empleo de operadores avanzados para identificar empresas recomendadas, amigas y socias para aplicar descuentos
 
-    const [a, b, c] = empresasAmigas;
-    forma.children[0].value == (a || b || c) && alert("La empresa es amiga. Aplique su código de descuento 34430");
+    const [a, b, c] = empresasRecomendadas;
+    forma.children[0].value == (a || b || c) && alert("La empresa es recomendada. Obtendrá un 10 % de descuento sobre su compra"); descuento = 0.1  ;
+
+   // const [d, e, f] = empresasAmigas;
+  //  forma.children[0].value == (d || e || f) && alert("La empresa es amiga. Obtendrá un 20 % de descuento sobre su compra") descuento = 0.3  ;
+
+    //const [g, h, i] = empresasSocias;
+    //forma.children[0].value == (g || h || i) && alert("La empresa es socia. Obtendrá un 30 % de descuento sobre su compra"); descuento = 0.3  ;
 
 }
 
@@ -259,7 +273,7 @@ function calcular() {
     for (i = 0; i < arrayPedido.length; i++) {
         for (j = 0; j < arrayPrecio.length; j++) {
             if (arrayPedido[i].nombre == arrayPrecio[j].nombre) {
-                precioTotal = precioTotal + ((arrayPedido[i].cantidad) * arrayPrecio[j].precio) * (1 - arrayPedido[i].descuento);
+                precioTotal = precioTotal + ((arrayPedido[i].cantidad) * arrayPrecio[j].precio) * (1 - descuento);
             }
         }
     }
