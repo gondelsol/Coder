@@ -141,19 +141,6 @@ let boton6 = document.getElementById("btnMostrar");
 boton6.addEventListener("click", mostrar);
 //boton6.onclick = () => (console.log("pinchaste el boton mostrar"));
 
-/*
-function presentacionCliente() {
-    cliente = document.getElementById("usuario");
-    cliente.innerHTML = `
-    <form id="formEmpresa" class="container">
-    <input type="text" class="form-control" id="miUsuario" placeholder="U & V Análisis">
-    </form>`;
-    empresa = document.getElementById("miUsuario");
-    empresa.addEventListener("submit", validarEmpresa);
-    localStorage.setItem('miUsuario', empresa);
-    unUsuario = localStorage.getItem('miUsuario');
-}
-*/
 
 function ingresarContacto() {
     contacto = document.getElementById("form");
@@ -230,13 +217,26 @@ function validarFormulario(e) {
     // empleo de operadores avanzados para identificar empresas recomendadas, amigas y socias para aplicar descuentos
 
     const [a, b, c] = empresasRecomendadas;
-    forma.children[0].value == (a || b || c) && alert("La empresa es recomendada. Obtendrá un 10 % de descuento sobre su compra"); descuento = 0.1  ;
+    forma.children[0].value == (a || b || c) && swal ({
+        title: 'Empresa recomendada',
+        text: 'Obtendrá un descuento del 10% en su compra',
+        icon: 'success',
+        confirm: 'ok',}); descuento = 0.1  ;
 
     const [f, g, h] = empresasAmigas;
-    forma.children[0].value == (f || g || h) && alert("La empresa es amiga. Obtendrá un 20 % de descuento sobre su compra"); descuento = 0.2  ;
+    forma.children[0].value == (f || g || h) && swal ({
+        title: 'Empresa amiga',
+        text: 'Obtendrá un descuento del 20% en su compra',
+        icon: 'success',
+        confirm: 'ok',}); descuento = 0.2  ;
 
     const [i, j, k] = empresasSocias;
-    forma.children[0].value == (i || j || k) && alert("La empresa es socia. Obtendrá un 30 % de descuento sobre su compra"); descuento = 0.3  ;
+    forma.children[0].value == (i || j || k) && swal ({
+        title: 'Empresa Socia',
+        text: 'Su compra corporativa tiene 30% de descuento',
+        icon: 'success',
+        confirm: 'ok',
+    }); descuento = 0.3  ;
 
     localStorage.setItem('empresa', JSON.stringify(forma.children[0].value));
     unUsuario = localStorage.getItem('empresa');
