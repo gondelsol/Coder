@@ -64,16 +64,12 @@ class Analisis {
     constructor(nombre, cantidad, codigo) {
         this.nombre = nombre;
         this.cantidad = parseInt(cantidad);
-        this.codigo = parseInt(codigo);
-        this.descuento = this.descuento;
-    }
+   }
 
     ingresarDatos() {
         do {
             this.cantidad = parseInt(prompt("Ingresar cantidad a analizar:  "));
         } while (this.cantidad < 0);
-
-        this.codigo = parseInt(prompt("Ingrese codigo promocional. Valores válidos para descuentos:\n1 - 14410 para el 10%.\n2 - 24420 para el 20%.\n3 - 34430 para el 30%."));
 
     }
     ingresarNombre() {
@@ -120,24 +116,7 @@ class Analisis {
         } while (confirm);
 
     }
-/*
-    evaluarCodigoPromocional() {
-        switch (this.codigo) {
-            case 14410:
-                this.descuento = 0.1;
-                break;
-            case 24420:
-                this.descuento = 0.2;
-                break;
-            case 34430:
-                this.descuento = 0.3;
-                break;
-            default:
-                this.descuento = 0;
-                break;
-        }
-    }
-*/
+
 }
 
 
@@ -189,7 +168,6 @@ function ingresarAnalisis() {
         arrayPedido[k] = new Analisis();
         arrayPedido[k].ingresarNombre();
         arrayPedido[k].ingresarDatos();
-        arrayPedido[k].evaluarCodigoPromocional();
         k++;
         control = confirm("¿Ingresará otro analisis mas?");
 
@@ -258,11 +236,11 @@ function validarFormulario(e) {
     const [a, b, c] = empresasRecomendadas;
     forma.children[0].value == (a || b || c) && alert("La empresa es recomendada. Obtendrá un 10 % de descuento sobre su compra"); descuento = 0.1  ;
 
-   // const [d, e, f] = empresasAmigas;
-  //  forma.children[0].value == (d || e || f) && alert("La empresa es amiga. Obtendrá un 20 % de descuento sobre su compra") descuento = 0.3  ;
+    const [f, g, h] = empresasAmigas;
+    forma.children[0].value == (f || g || h) && alert("La empresa es amiga. Obtendrá un 20 % de descuento sobre su compra"); descuento = 0.2  ;
 
-    //const [g, h, i] = empresasSocias;
-    //forma.children[0].value == (g || h || i) && alert("La empresa es socia. Obtendrá un 30 % de descuento sobre su compra"); descuento = 0.3  ;
+    const [i, j, k] = empresasSocias;
+    forma.children[0].value == (i || j || k) && alert("La empresa es socia. Obtendrá un 30 % de descuento sobre su compra"); descuento = 0.3  ;
 
 }
 
