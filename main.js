@@ -235,8 +235,7 @@ function validarFormulario(e) {
         title: 'Empresa Socia',
         text: 'Su compra corporativa tiene 30% de descuento',
         icon: 'success',
-        confirm: 'ok',
-    }); descuento = 0.3  ;
+        confirm: 'ok',}); descuento = 0.3  ;
 
     localStorage.setItem('empresa', JSON.stringify(forma.children[0].value));
     unUsuario = localStorage.getItem('empresa');
