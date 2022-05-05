@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+/* nav */
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubblegum+Sans&family=Estonia&family=Kaushan+Script&family=Knewave&family=Licorice&family=Love+Light&family=Luxurious+Roman&family=Merienda:wght@400;700&family=Mitr:wght@200&family=Niconne&family=Permanent+Marker&family=Rock+Salt&family=Sacramento&family=Shadows+Into+Light&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&family=Vujahday+Script&display=swap");
+.navbar {
+  background-color: pink !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: 20px;
+}
+.navbar a::first-letter {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.nav-link:hover {
+  color: blueviolet !important;
+  font-size: 30px;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+.mainvalue {
+  margin: 30px;
+}
+.mainvalue h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+  color: blueviolet;
+}
+.mainvalue p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+.list-group {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 20px;
+}
+.list-group a:active {
+  background-color: pink;
+  color: blueviolet;
+}
+
+.tab-content .tab-pane {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+/* home Page */
+/* carousel */
+.carousel-item {
+  height: 300px !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.principal {
+  padding: 30px 0px 0px 0px;
+}
+.principal h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+.principal p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+.maincontact {
+  margin: 10px;
+}
+
+.form-group {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 30px;
+}
+
+.btn {
+  background-color: pink;
+}
+
+.mapa {
+  border: solid 4px pink;
+  border-radius: 16px;
+  margin-top: 30px;
+  height: 500px;
+}
+.mapa .gmap {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* paleta de colores */
+/* tamaño del carousel*/
+/* tamaño fuentes */
+/* medidas botones */
+/*margins - paddings*/
+/* fuentes */
+/* nombre de los profesionales*/
+/* nombre de los profesionales*/
+/*estilos de texto */
+.services h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+.services .servicio1 h2, .services .servicio2 h2 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 30px;
+  text-align: center;
+}
+.services .servicio1 h3, .services .servicio2 h3 {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+  text-decoration: underline 1px;
+  text-align: center;
+}
+.services .servicio1 p, .services .servicio2 p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* cuerpo */
+body {
+  background-image: url(./images/fondo8.svg);
+  background-size: cover;
+  background-position: top;
+}
+
+/* Encabezado */
+header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*Fondos servicios*/
+.servicio1, .services .servicio2,
+.servicio2 {
+  margin-top: 30px;
+  background-image: url(./images/fondo8.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+/* clientes*/
+.cliente {
+  margin-top: 10px;
+}
+.cliente h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+.cliente p {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+.cfoto {
+  align-content: center;
+  justify-content: center;
+  text-justify: newspaper;
+}
+
+.foto {
+  padding: 10px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: solid pink 2px;
+}
+
+.foto1 {
+  background-image: url(./images/parra.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.foto2 {
+  background-image: url(./images/bodega.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.foto3 {
+  background-image: url(./images/Mendoza.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Clientes */
+/*footer*/
+footer {
+  margin-top: 10px;
+  padding: 10px 0px 0px 0px;
+  background-image: url(./images/fondo7.svg);
+  background-size: cover;
+  background-position: center;
+  text-align: right;
+}
+footer .redes {
+  text-align: center;
+  font-size: 30px;
+}
+footer .redes .fab {
+  padding: 0px 30px 0px 0px;
+}
+footer .contacto h3 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+}
+footer .contacto ul li {
+  list-style: none;
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 15px;
+}
+footer .contacto p {
+  font-family: "Merienda", cursive;
+  font-size: 10px;
+}
+
+.fab:hover {
+  color: blueviolet;
+  font-size: 40px;
+}
+
+/* fin footer */
+/* tarjetas del sitio */
+.card {
+  border: solid 2px pink;
+  margin: 10px;
+}
+.card .card-body .card-title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 30px;
+  color: blueviolet;
+}
+.card .card-body .card-text {
+  font-family: "Architects Daughter", cursive;
+  font-size: 20px;
+}
+
+button {
+  width: 600px;
+  height: 30px;
+  font-family: "Ubuntu", sans-serif;
+  color: pink;
+  margin: 20px;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

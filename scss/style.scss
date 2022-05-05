@@ -1,0 +1,176 @@
+@import "variables";
+@import "nav";
+@import "values";
+@import "index";
+@import "contact";
+@import "services";
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* cuerpo */
+
+body {
+    background-image: url(./images/fondo8.svg);
+    background-size: cover;
+    background-position: top;
+}
+
+/* Encabezado */
+header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/*Fondos servicios*/
+
+.servicio1,
+.servicio2 {
+    margin-top: 30px;
+    background-image: url(./images/fondo8.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/* clientes*/
+
+.cliente {
+    margin-top: 10px;
+
+    h1 {
+        @include titulo1 (-family, -size);
+    }
+
+    p {
+        @include paragrph(-family, -size);
+    }
+}
+
+.cfoto {
+    align-content: center;
+    justify-content: center;
+    text-justify: newspaper;
+}
+
+.foto {
+    padding: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: solid pink 2px;
+}
+
+.foto1 {
+    background-image: url(./images/parra.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.foto2 {
+    background-image: url(./images/bodega.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.foto3 {
+    background-image: url(./images/Mendoza.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Clientes */
+
+/*footer*/
+
+footer {
+    margin-top: $dis1;
+    padding: $dis1 0px 0px 0px;
+    background-image: url(./images/fondo7.svg);
+    background-size: cover;
+    background-position: center;
+    text-align: right;
+
+    & .redes {
+        text-align: center;
+        font-size: $fsize3;
+
+        & .fab {
+            padding: 0px 30px 0px 0px;
+        }
+    }
+
+    & .contacto {
+        h3 {
+            font-family: $fuente8;
+            font-size: $fsize2;
+        }
+
+        ul {
+            li {
+                list-style: none;
+                font-family: $fuente5;
+                font-size: $fsize1-5;
+            }
+        }
+
+        p {
+            font-family: $fuente7;
+            font-size: $fsize1;
+        }
+    }
+}
+
+
+.fab:hover {
+    color: $color2;
+    font-size: $fsize4;
+}
+
+/* fin footer */
+
+
+/* tarjetas del sitio */
+
+
+.card {
+    border: solid 2px pink;
+    margin: 10px;
+
+    & .card-body {
+        & .card-title {
+            @include cardtitle (-family, -size);
+        }
+
+        & .card-text {
+            @include paragrph(-family, -size);
+        }
+    }
+
+}
+
+
+
+
+ button {
+        width: $bsize60;
+        height: $bsize3;
+        font-family: $fuente1;
+        color: $color1;
+        margin: $dis2;
+        padding: $dis1;
+
+ }

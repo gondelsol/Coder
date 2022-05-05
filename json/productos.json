@@ -1,0 +1,10 @@
+ [
+     { "nombre": "Basic 1", "precio": 100 },
+     { "nombre": "Basic 2", "precio": 200 },
+     { "nombre": "Basic 3", "precio": 300 },
+     { "nombre": "Basic 4", "precio": 400 },
+     { "nombre": "Phenolic 1", "precio": 100 },
+     { "nombre": "Phenolic 2", "precio": 200 },
+     { "nombre": "Phenolic 3", "precio": 300 },
+     { "nombre": "Phenolic 4", "precio": 400 }
+ ]
