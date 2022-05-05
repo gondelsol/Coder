@@ -22,25 +22,11 @@ let empresasSocias=[]; //cuando la web reconozca estas empresas, la misma les ap
 let calculadora;
 
 
-/*
-const arrayPrecio = [
-    { nombre: 'Basic 1', precio: 100 },
-    { nombre: 'Basic 2', precio: 200 },
-    { nombre: 'Basic 3', precio: 300 },
-    { nombre: 'Basic 4', precio: 400 },
-    { nombre: 'Phenolic 1', precio: 100 },
-    { nombre: 'Phenolic 2', precio: 200 },
-    { nombre: 'Phenolic 3', precio: 300 },
-    { nombre: 'Phenolic 4', precio: 400 },
-];
 
 
-console.log(arrayPrecio);
-*/
+// Empleo de Fetch para cargar los productos
 
-// Usando Fetch para cargar los productos
-
-fetch ('/json/productos.json')
+fetch ('../json/productos.json')
 .then ( (res) => res.json())
 .then ((data) => {    
     arrayPrecio = data;
@@ -49,21 +35,21 @@ fetch ('/json/productos.json')
 
 // Empleo de Fetch para identificar empresas recomendadas, amigas y socias.
 
-fetch('/json/empresasRecomendadas.json')
+fetch('../json/empresasRecomendadas.json')
 .then((res) => res.json())
 .then((data) => {
     empresasRecomendadas = data;
     console.log(empresasRecomendadas);
 })
 
-fetch('/json/empresasAmigas.json')
+fetch('../json/empresasAmigas.json')
 .then((res) => res.json())
 .then((data) => {
     empresasAmigas = data;
     console.log(empresasAmigas);
 })
 
-fetch('/json/empresasSocias.json')
+fetch('../json/empresasSocias.json')
 .then((res) => res.json())
 .then((data) => {
     empresasSocias = data;
@@ -297,3 +283,6 @@ function mostrar() {
     objetos("NombrePrecio", JSON.stringify(datos));
 
 }
+
+
+//  git push --force https://github.com/gondelsol/Coder.git master
